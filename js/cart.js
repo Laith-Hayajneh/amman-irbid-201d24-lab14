@@ -9,13 +9,16 @@ let cart;
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
-}
+  console.log(cartItems);
 
+}
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
 function renderCart() {
   loadCart();
   clearCart();
   showCart();
+  console.log(cart)
+
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
@@ -43,3 +46,4 @@ function removeItemFromCart(event) {
 
 // This will initialize the page and draw the cart on screen
 renderCart();
+console.log(cart)
