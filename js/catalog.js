@@ -86,7 +86,7 @@ function updateCartPreview() {
 
   for (let i = 0; i < cart.items.length; i++) {
     list.appendChild(para);
-    para.textContent = (`This cart it has a ${cart.items[i].product}`);
+    para.textContent = (`This cart have ${cart.items[i].quantity} ${cart.items[i].product}`);
 
   }
 
